@@ -1,0 +1,6 @@
+venv/
+venv_gnews/
+__pycache__/
+.DS_Store
+*.log
+
