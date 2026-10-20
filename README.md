@@ -1,14 +1,10 @@
-# Insider Sentiment Framework
+# Insider disclosures, news sentiment and returns after costs
 
-An AI-driven research framework for analyzing the effects of **insider trading disclosures** and **news sentiment** on BSE SENSEX constituent stocks. The framework combines regulatory filing data (SEBI SAST/PIT insider disclosures), financial news sentiment (via GDELT and NewsAPI), and historical price data to build predictive features. A multi-objective optimization layer (planned) will balance prediction accuracy, risk-adjusted returns, and model interpretability.
+An exploratory event study of SEBI insider-trading disclosures across 396 Indian stocks. Prices drift after insider buys and sells (see `analysis/event_study_car.png`), but a portfolio built on the signal didn't improve net returns after costs. News sentiment covered only 9 of the 396 stocks, too few to test the interaction.
 
+Trades start the trading day after each disclosure to avoid look-ahead bias. No live trading; not investment advice.
 
-## Current Status
-
-- **Universe**: 396 NSE-listed tickers selected by having >=75 insider filings over 7 years with available price history.
-- **Date Range**: 2019-06-17 to 2026-06-12 (7 years of daily data).
-- **Implemented**: Insider trading features (original, role-split, relative-size, clustering), macro features, LightGBM panel models, **PyTorch TabularMLP neural networks**, event study analysis, portfolio tilt backtest, and FinBERT continuous news sentiment pipeline (GPU/MPS accelerated).
-- **Key Finding**: Core insider buy disclosures are followed by a statistically significant ~1% abnormal price drift over 20 trading days. However, this effect is economically marginal (0.08 SD) and does not survive transaction costs when deployed as a portfolio tilt strategy. An NSGA-II optimizer powered by Deep Learning (TabularMLP) successfully reduced portfolio volatility and cut max drawdown out-of-sample, but failed to generate excess positive Alpha over the baseline due to the turnover penalty. The Sentiment Analysis integration was disabled after failing data coverage validations (sentiment data only covered 9/396 tickers). See `FINAL_REPORT.md` for details.
+Write-up: https://nalinaggarwal.me/work/insider-signals/
 
 ---
 
