@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Insider disclosures, news sentiment and returns after costs"
+message: "If you use this repository in research, please cite it using this metadata."
+type: software
+authors:
+  - family-names: Aggarwal
+    given-names: Nalin
+    orcid: "https://orcid.org/0009-0003-0307-9279"
+    website: "https://nalinaggarwal.me/"
+repository-code: "https://github.com/nalin1304/insider-sentiment-framework"
+url: "https://nalinaggarwal.me/work/insider-signals/"
+abstract: >-
+  An exploratory event study of SEBI insider-trading disclosures, news sentiment
+  and returns across 396 Indian stocks, evaluated after trading costs.
+keywords:
+  - event study
+  - insider trading
+  - SEBI
+  - quantitative finance
+  - news sentiment
